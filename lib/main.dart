@@ -11,13 +11,76 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100,
-            width: 100,
-            margin: EdgeInsets.fromLTRB(20, 10, 50, 20),
-            padding: EdgeInsets.all(20),
-            color: Colors.white,
-            child: Text('Hello'),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/avatar.ico'),
+              ),
+              Text(
+                'Michael Jin',
+                style: TextStyle(
+                  fontFamily: 'Sansita',
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  fontFamily: 'Sansita',
+                  fontSize: 20,
+                  color: Colors.teal.shade100,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      Text(
+                        '+1 213 814 4239',
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.email,
+                        color: Colors.teal,
+                      ),
+                      Text(
+                        'michael.jin.dev@gmail.com',
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
